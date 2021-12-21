@@ -42,9 +42,9 @@ namespace bases
 
         public void Open_or_close(bool is_open)
         {
-            if (is_open && state == State_E.CLOSE)
+            if (is_open && state != State_E.DESTRUCTED)
                 state = State_E.OPEN;
-            else if (!is_open && state == State_E.OPEN)
+            else if (!is_open && state != State_E.DESTRUCTED)
                 state = State_E.CLOSE;
         }
 

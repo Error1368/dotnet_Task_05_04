@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+using System.Collections;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace dotnet_Task_05_04
@@ -97,7 +94,20 @@ namespace dotnet_Task_05_04
             }
 
             object result = method.Invoke(editable_object, args);
-            Console.WriteLine(result);
+            string to_output = "Вывод:\n";
+            if (result is IDictionary) {
+                foreach (object key in ((IDictionary)result).Keys)
+                {
+                    to_output += key.ToString() + ": " + ((IDictionary)result)[key].ToString() + "\n"; 
+                }
+            }
+            else if(result is null)
+                to_output += "Вернул void";
+            else
+                to_output += result.ToString();
+
+            labelOutput.Text = to_output;
+            
         }
 
         private void buttonCreate_Click(object sender, EventArgs e)

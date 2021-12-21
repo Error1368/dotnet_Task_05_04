@@ -38,6 +38,7 @@ namespace dotnet_Task_05_04
             this.groupBoxArgs = new System.Windows.Forms.GroupBox();
             this.groupBoxMethods = new System.Windows.Forms.GroupBox();
             this.groupBoxToExecute = new System.Windows.Forms.GroupBox();
+            this.labelOutput = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // comboBoxTypes
@@ -72,7 +73,7 @@ namespace dotnet_Task_05_04
             // 
             this.groupBoxMethods.Location = new System.Drawing.Point(269, 36);
             this.groupBoxMethods.Name = "groupBoxMethods";
-            this.groupBoxMethods.Size = new System.Drawing.Size(240, 61);
+            this.groupBoxMethods.Size = new System.Drawing.Size(240, 20);
             this.groupBoxMethods.TabIndex = 6;
             this.groupBoxMethods.TabStop = false;
             this.groupBoxMethods.Text = "Методы объекта";
@@ -81,16 +82,25 @@ namespace dotnet_Task_05_04
             // 
             this.groupBoxToExecute.Location = new System.Drawing.Point(515, 36);
             this.groupBoxToExecute.Name = "groupBoxToExecute";
-            this.groupBoxToExecute.Size = new System.Drawing.Size(300, 382);
+            this.groupBoxToExecute.Size = new System.Drawing.Size(300, 20);
             this.groupBoxToExecute.TabIndex = 6;
             this.groupBoxToExecute.TabStop = false;
             this.groupBoxToExecute.Text = "Аргументы метода";
+            // 
+            // labelOutput
+            // 
+            this.labelOutput.Location = new System.Drawing.Point(822, 36);
+            this.labelOutput.Name = "labelOutput";
+            this.labelOutput.Size = new System.Drawing.Size(223, 423);
+            this.labelOutput.TabIndex = 7;
+            this.labelOutput.Text = "Вывод:";
             // 
             // Editor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1057, 659);
+            this.ClientSize = new System.Drawing.Size(1057, 468);
+            this.Controls.Add(this.labelOutput);
             this.Controls.Add(this.groupBoxToExecute);
             this.Controls.Add(this.groupBoxMethods);
             this.Controls.Add(this.groupBoxArgs);
@@ -109,5 +119,6 @@ namespace dotnet_Task_05_04
         private System.Windows.Forms.GroupBox groupBoxArgs;
         private System.Windows.Forms.GroupBox groupBoxMethods;
         private System.Windows.Forms.GroupBox groupBoxToExecute;
+        private System.Windows.Forms.Label labelOutput;
     }
 }
