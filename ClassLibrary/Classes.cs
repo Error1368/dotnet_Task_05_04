@@ -88,7 +88,7 @@ namespace classess
         public int Deposit_for_the_year(int deposit)
         {
             int res = (int)(deposit * (1.0 + Percent/100.0));
-            return res >= Capital + deposit ? res : Capital + deposit;
+            return res >= Capital + deposit ? Capital + deposit : res;
         }
 
         public override Dictionary<string, object> getParams()
